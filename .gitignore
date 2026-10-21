@@ -41,6 +41,7 @@ artifacts/
 *.tar
 
 .codex/
+/upload/
 
 # This gallery keeps its static source in out.
 !/out/

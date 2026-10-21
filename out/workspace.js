@@ -1,4 +1,5 @@
 // Persistent records contain connection metadata and reports, never API keys.
+// Keep the original storage key so existing workspaces survive the rebrand.
 export const WORKSPACE_KEY='omniroute-workspace-v2';
 export const emptyWorkspace=()=>({version:2,providers:[],models:[],reports:[],updatedAt:null});
 const text=(v,label,max=300)=>{if(typeof v!=='string'||!v.trim()||v.length>max)throw Error(`${label} is required (maximum ${max} characters).`);return v.trim();};

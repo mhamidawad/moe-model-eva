@@ -1,8 +1,12 @@
-# OmniRoute Model Lab
+# MOe Model Lab
+
+<img src="out/assets/moe-model-lab-logo.png" alt="MOe Model Lab metallic M logo" width="180">
 
 Project repository: [https://github.com/mhamidawad/moe-model-eva](https://github.com/mhamidawad/moe-model-eva).
 
 A private model-evaluation gallery for cloud APIs, self-hosted servers, and local runtimes. Production is a dependency-free static frontend with no build step. Sites provides owner-only authentication; UI privacy labels are informational.
+
+MOe Model Lab is the product name. OmniRoute remains a supported gateway integration. Existing browser storage and workspace-backup schemas retain their original identifiers so saved models, reports, filters, and older backups keep working after the rebrand. Downloads from the app use the `moe-model-lab-` filename prefix; the OmniRoute catalog helper and its environment variables retain their existing interface.
 
 ## Working features
 
