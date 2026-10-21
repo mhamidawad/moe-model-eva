@@ -1,0 +1,27 @@
+name: moe-model-lab
+
+services:
+  web:
+    image: ${MOE_MODEL_LAB_IMAGE:-moe-model-lab:docker}
+    pull_policy: never
+    ports:
+      - target: 8080
+        published: "${MOE_MODEL_LAB_PORT:-8080}"
+        host_ip: 127.0.0.1
+        protocol: tcp
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=16m,mode=1777
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    mem_limit: 128m
+    pids_limit: 64
+    restart: unless-stopped
+    stop_grace_period: 10s
+    logging:
+      driver: json-file
+      options:
+        max-size: 5m
+        max-file: "2"
