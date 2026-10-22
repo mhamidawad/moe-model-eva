@@ -27,6 +27,8 @@ Serve `out` with a static HTTP server; there is no compilation step. `pnpm test`
 
 ## Deployment
 
+For a container on your PC or Oracle VM, use the [Docker deployment instructions](docker/README.md). The `Docker` branch builds and validates native AMD64 and ARM64 image archives in GitHub Actions. Compose runs a preloaded image on localhost; no local image build or registry publication is required.
+
 The identity and static directory are in `.openai/hosting.json`. Push source, package the exact committed `.openai/hosting.json` and `out` directory, and privately deploy that commit. Preserve owner-only access. Do not make the site public without the owner's approval.
 
 No live OmniRoute instance has been contacted or configured as part of this implementation. Connection tests use injected transports or a loopback test server. No real evaluation was performed and no test reports were preloaded into the deployed workspace.

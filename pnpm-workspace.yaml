@@ -1,0 +1,3 @@
+# Keep the project's existing, explicitly pinned DOM test dependency.
+minimumReleaseAgeExclude:
+  - linkedom@0.18.14
